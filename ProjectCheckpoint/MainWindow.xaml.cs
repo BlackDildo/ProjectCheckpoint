@@ -13,7 +13,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ProjectCheckpoint.Models;
 using System.Threading.Tasks;
-
+using ProjectCheckpoint.Listener;
 
 namespace ProjectCheckpoint
 {
@@ -48,6 +48,7 @@ namespace ProjectCheckpoint
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
+            TcpListener.Instance.Listen();
             //Report<Student> report = new Report<Student>();
             //report.Create(unitOfWork.StudentRepository.GetAllRecords());
         }
