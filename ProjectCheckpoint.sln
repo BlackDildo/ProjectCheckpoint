@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectCheckpoint", "ProjectCheckpoint\ProjectCheckpoint.csproj", "{393FF2D0-D88E-4BD1-9636-7DDB358042F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reports", "Reports\Reports.csproj", "{228BABDB-55B7-46A9-8B4F-8ACF1681ED79}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{393FF2D0-D88E-4BD1-9636-7DDB358042F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{393FF2D0-D88E-4BD1-9636-7DDB358042F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{393FF2D0-D88E-4BD1-9636-7DDB358042F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{393FF2D0-D88E-4BD1-9636-7DDB358042F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{228BABDB-55B7-46A9-8B4F-8ACF1681ED79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{228BABDB-55B7-46A9-8B4F-8ACF1681ED79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{228BABDB-55B7-46A9-8B4F-8ACF1681ED79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{228BABDB-55B7-46A9-8B4F-8ACF1681ED79}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
