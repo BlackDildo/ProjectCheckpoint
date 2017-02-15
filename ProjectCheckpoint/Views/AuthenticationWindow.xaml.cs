@@ -22,5 +22,17 @@ namespace ProjectCheckpoint.Views
         {
             InitializeComponent();
         }
+
+        private void loginButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void exitButton_Click(object sender, RoutedEventArgs e)
+        {            
+            //LoadingWindow lW = new LoadingWindow();
+            //lW.Owner = this;
+            //lW.Show();
+        }
     }
 }

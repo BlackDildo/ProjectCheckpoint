@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
+﻿using System.Data.Entity;
 
 namespace ProjectCheckpoint.Models
 {
     public class DataContext : DbContext
     {
         public DbSet<Student> Student { get; set; }
+        public DbSet<User> User { get; set; }
     }
 }

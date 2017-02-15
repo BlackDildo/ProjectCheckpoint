@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using ProjectCheckpoint.Models.Repository;
+using System;
 
 namespace ProjectCheckpoint.Models
 {
@@ -10,6 +8,7 @@ namespace ProjectCheckpoint.Models
         private DataContext dataContext = new DataContext();
 
         private StudentRepository studentRepository;
+        private UserRepository userRepository;
 
         public StudentRepository StudentRepository
         {
@@ -20,6 +19,17 @@ namespace ProjectCheckpoint.Models
 
                 return studentRepository;
             }            
+        }
+
+        public UserRepository UserRepository
+        {
+            get
+            {
+                if (userRepository == null)
+                    userRepository = new UserRepository(dataContext);
+
+                return userRepository;
+            }
         }
 
         public void Save()
