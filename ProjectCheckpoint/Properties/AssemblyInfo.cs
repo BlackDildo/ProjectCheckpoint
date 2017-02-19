@@ -30,6 +30,7 @@ using System.Windows;
 
 //[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.Satellite)]
 
+[assembly: System.Resources.NeutralResourcesLanguageAttribute("en")]
 
 [assembly: ThemeInfo(
     ResourceDictionaryLocation.None, //где расположены словари ресурсов по конкретным тематикам

@@ -25,7 +25,9 @@ namespace ProjectCheckpoint.Views
 
         private void loginButton_Click(object sender, RoutedEventArgs e)
         {
-
+            MainWindow mWindow = new MainWindow();
+            mWindow.Show();
+            this.Close();
         }
 
         private void exitButton_Click(object sender, RoutedEventArgs e)

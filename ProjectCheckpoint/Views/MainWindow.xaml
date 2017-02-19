@@ -1,0 +1,41 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectCheckpoint.Views"
+        xmlns:Controls="clr-namespace:ProjectCheckpoint.Controls" x:Class="ProjectCheckpoint.Views.MainWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="300" Width="400" MinWidth="400" MinHeight="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>        
+        <StatusBar Grid.Row="1" Background="{x:Null}">
+            <StatusBar.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="auto"/>
+                        </Grid.ColumnDefinitions>
+                    </Grid>
+                </ItemsPanelTemplate>
+            </StatusBar.ItemsPanel>
+            <StatusBarItem>
+                <TextBlock FontSize="14">
+                    <Run Text="Происходит тестирование"/>
+                    <Run Text="Доступность базы" Foreground="#FF73B2F1" />
+                </TextBlock>
+            </StatusBarItem>            
+            <StatusBarItem Grid.Column="1" d:IsHidden="True">
+                <Controls:BubblesLoading x:Name="Bubbles" HorizontalAlignment="Center" VerticalAlignment="Center" Width="53" Height="15" BubblesColor="#FF73B2F1" Foreground="{x:Null}"/>
+            </StatusBarItem>
+        </StatusBar>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100"/>
+        <Label x:Name="label" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
+        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="38,206,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
+
+    </Grid>
+</Window>
