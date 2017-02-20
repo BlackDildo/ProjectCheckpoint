@@ -7,13 +7,16 @@
         xmlns:v="clr-namespace:ProjectCheckpoint.ViewModels"
         xmlns:Controls="clr-namespace:ProjectCheckpoint.Controls" xmlns:ee="http://schemas.microsoft.com/expression/2010/effects" x:Class="ProjectCheckpoint.Views.AuthenticationWindow"
         mc:Ignorable="d"
-        Title="AuthenticationWindow" Height="300" Width="300" FontSize="20" >
+        Title="{DynamicResource m_AuthenticationWindow_Title}" Height="300" MaxHeight="600" Width="300" MaxWidth="600" FontSize="20" >
     <!--<Window.Resources>
         <v:AuthenticationViewModel x:Key="key" Login="login" Password="password" />
     </Window.Resources>-->
     <Window.DataContext>
-        <v:AuthenticationViewModel Login="login" Password="password"/>
+        <v:AuthenticationViewModel Login="admin" Password="password"/>
     </Window.DataContext>
+    <Window.CommandBindings>
+        <CommandBinding Command="ApplicationCommands.Close" Executed="CloseCommandHandler"/>
+    </Window.CommandBindings>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -31,10 +34,11 @@
         <TextBox x:Name="loginInput"        Grid.Column="1" Grid.Row="1" Text="{Binding Login}" HorizontalAlignment="Stretch" TextWrapping="NoWrap" VerticalAlignment="Center" Grid.ColumnSpan="2" Template="{DynamicResource FlatTextBoxStyle}" />
         <Controls:LoadingRing x:Name="ring" Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="50.667,-16.667,-41.167,0" Grid.Row="1" Grid.RowSpan="2" VerticalAlignment="Top" Width="100" RingBorderColor="{x:Null}" RingColor="#7F6ADA36" Visibility="Collapsed" d:IsHidden="True" />
         <!--Background="{x:Null}" BorderBrush="#FFC8C8C8" BorderThickness="2"-->
-        <PasswordBox x:Name="passwordInput" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.ColumnSpan="2" Template="{DynamicResource FlatPasswordBoxStyle}" />
+        <PasswordBox x:Name="passwordInput" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.ColumnSpan="2" Password="admin" Template="{DynamicResource FlatPasswordBoxStyle}" />
         <Button x:Name="loginButton"        Grid.Column="1" Grid.Row="3" Content="Войти" HorizontalAlignment="Left"  VerticalAlignment="Center" Width="75" Click="loginButton_Click" Style="{DynamicResource FlatButtonStyle}" IsDefault="True"/>
 
-        <Button x:Name="exitButton"         Grid.Column="2" Grid.Row="3" Content="Выйти" HorizontalAlignment="Right" VerticalAlignment="Center" Width="75" Click="exitButton_Click" Style="{DynamicResource FlatButtonStyle}" IsCancel="True"/>
+        <Button x:Name="exitButton"         Grid.Column="2" Grid.Row="3" Content="Выйти" HorizontalAlignment="Right" VerticalAlignment="Center" Width="75" Click="exitButton_Click" Style="{DynamicResource FlatButtonStyle}" Command="ApplicationCommands.Close"/>
+        <ComboBox x:Name="menuLanguage" HorizontalAlignment="Center" VerticalAlignment="Center" Width="99" Grid.Column="2" Grid.Row="4"/>
     </Grid>
 </Window>
 
